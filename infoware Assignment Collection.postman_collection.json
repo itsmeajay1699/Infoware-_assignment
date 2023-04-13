@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "66d1ee63-eeac-41ee-a34e-ee529692e2e7",
+		"name": "infoware Assignment Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26579880"
+	},
+	"item": [
+		{
+			"name": "get all employees with pagination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/employees?limit=4&page=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"employees"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "4"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete a employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/employees/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"employees",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update a request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"sunny\",\r\n    \"email\":\"ajay@gmial.com\",\r\n    \"phone\":\"8700497944\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/employees/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"employees",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create a new employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"email\": \"john.doe@example.com\",\r\n    \"phone\": \"123-456-7890\",\r\n    \"contactDetails\": [\r\n        {\r\n            \"address\": \"rd-280\",\r\n            \"city\": \"mumbai\",\r\n            \"state\": \"borivali\",\r\n            \"Emer_No\": \"1234567890\",\r\n            \"relationship\": \"Single\",\r\n            \"secondNo\": \"1234567890\"\r\n        },\r\n        {\r\n            \"address\": \"rd-280\",\r\n            \"city\": \"mumbai\",\r\n            \"state\": \"borivali\",\r\n            \"Emer_No\": \"1234567890\",\r\n            \"relationship\": \"Single\",\r\n            \"secondNo\": \"1234567890\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
